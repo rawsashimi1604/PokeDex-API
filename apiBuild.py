@@ -160,6 +160,16 @@ class Pokemon(Resource):
         db.session.commit()
         return result
 
+    @marshal_with(resource_fields)
+    def delete(self, id):
+        result = PokeModel.query.filter_by(id=id).first()
+        if not result:
+            abort(404, message=f"Could not find Pokemon with id <{id}>")
+
+        db.session.delete(result)
+        db.session.commit()
+        return result
+
 
 # Register Resource
 api.add_resource(Pokemon, "/pokemon/<int:id>")
