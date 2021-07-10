@@ -22,6 +22,10 @@ Firstly, go to apiBuild.py and run it.
 Then open cmd and run apiPut.py
 
 *PUT allows us to populate data in our database using pokemon.csv*
+** NOTE : After creating database.db, it is important to delete/uncomment the line of code so that it stops reinitializing the database **
+```python 
+  db.create_all() # Comment / Delete this line of code after creating DB file.
+```
 
 ```python
 import csv
