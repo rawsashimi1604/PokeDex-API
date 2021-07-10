@@ -74,3 +74,25 @@ Example Output:
   {'id': 2, 'name': 'Ivysaur', 'type1': 'Grass', 'type2': 'Poison', 'total': 405, 'hp': 60, 'attack': 62, 'defense': 63, 'sp_att': 80, 'sp_def': 80, 'speed': 60, 'generation': 1, 'legendary': 'False'}
 ``` 
 
+You can also receive directly from the server. Simply open google chrome and navigate to the URL "http://127.0.0.1:5000/" after launching flask.
+To get pokemon of ID : 2, use "http://127.0.0.1:5000/pokemon/2"
+
+Example Output:
+```json
+{
+    "id": 2,
+    "name": "Ivysaur",
+    "type1": "Grass",
+    "type2": "Poison",
+    "total": 405,
+    "hp": 60,
+    "attack": 62,
+    "defense": 63,
+    "sp_att": 80,
+    "sp_def": 80,
+    "speed": 60,
+    "generation": 1,
+    "legendary": "False"
+}
+```
+
